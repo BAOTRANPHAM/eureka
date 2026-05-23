@@ -2,6 +2,10 @@ pipeline {
 
     agent any
 
+     tools {
+        maven 'Maven'
+     }
+
     environment {
         IMAGE_NAME = "eureka-server"
     }
