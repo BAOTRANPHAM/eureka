@@ -10,7 +10,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/BAOTRANPHAM/eureka.git'
+                scm
             }
         }
 
