@@ -1,0 +1,16 @@
+services:
+  eureka-server:
+    image: eureka-server:latest
+    container_name: eureka-server
+
+    ports:
+      - "8761:8761"
+
+    restart: unless-stopped
+
+    networks:
+      - microservices-network
+
+networks:
+  microservices-network:
+    external: true

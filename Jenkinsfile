@@ -29,6 +29,13 @@ pipeline {
                 sh 'docker build -t $IMAGE_NAME .'
             }
         }
+        stage('Deploy with Compose') {
+             steps {
+                 sh '''
+                    docker compose -f user-service/compose.yaml up -d --force-recreate
+                    '''
+             }
+        }
 
         stage('Run Container') {
             steps {
