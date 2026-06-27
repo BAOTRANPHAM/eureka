@@ -32,7 +32,7 @@ pipeline {
         stage('Deploy with Compose') {
              steps {
                  sh '''
-                    docker compose -f discovery-server/compose.yaml up -d --force-recreate
+                    docker compose -f compose.yaml up -d --force-recreate
                     '''
              }
         }
